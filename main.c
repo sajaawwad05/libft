@@ -13,12 +13,16 @@ int	main(void)
 	//printf("%s\n", ft_strchr("hi how are u", '\0'));
 	//printf("%s\n", ft_strrchr("lala land", 'a'));
 	//printf("%d\n", ft_strncmp("hahahtkkl", "hahahtoo", 5));
-	char s[10] = "hi there";
-	char d[10];
+	char s[] = "ABCDE";
+	char d[3];
 	//ft_memset(s, 'd', sizeof(s));
 	//printf("%s\n", s);
-	ft_memcpy(d, s, sizeof(s));
-	printf("%s\n", s);
+	//ft_memcpy(d, s, sizeof(s));
+	//printf("%s\n", s);
+	//ft_memmove(s+1, s, sizeof(char)*4);
+	//printf("%s\n", s);
+	printf("%ld\n", ft_strlcpy(d, s, 3));
+	printf("%s\n", d);
 
 	return (0);
 }

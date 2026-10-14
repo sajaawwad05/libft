@@ -13,7 +13,7 @@ size_t	words_count(char const *s, char c)
 			++s;
 		while (*s && *s != c)
 		{
-			if(!inside_word)
+			if (!inside_word)
 			{
 				++words;
 				inside_word = true;
@@ -22,8 +22,8 @@ size_t	words_count(char const *s, char c)
 		}
 	}
 	return (words);
-	
 }
+
 int	safe_malloc(char **words_v, int position, size_t buffer)
 {
 	int	i;
@@ -41,10 +41,11 @@ int	safe_malloc(char **words_v, int position, size_t buffer)
 	}
 	return (0);
 }
+
 int	cpy_words(char **words, char const *s, char c)
 {
 	size_t	len;
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (*s)
@@ -59,11 +60,11 @@ int	cpy_words(char **words, char const *s, char c)
 		}
 		if (len)
 		{
-			if(safe_malloc(words, i, len + 1));
+			if (safe_malloc(words, i, len + 1))
 				return (1);
+			ft_strlcpy(words[i], s - len, len + 1);
+			i++;
 		}
-		ft_strlcpy(words[i], s - len, len + 1);
-		i++;
 	}
 	return (0);
 }
@@ -77,10 +78,9 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	words = words_count(s, c);
 	words_v = malloc ((words + 1) * sizeof (char *));
-	if (words_v == 	NULL)
+	if (words_v == NULL)
 		return (NULL);
 	words_v[words] = NULL;
-
 	if (cpy_words(words_v, s, c))
 	{
 		free(words_v);

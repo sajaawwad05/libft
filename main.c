@@ -3,7 +3,7 @@
 int	main(void)
 {
 	//printf("%d", ft_isalpha('k'));
-	//printf("%d\n", ft_isdigit('l'));
+	printf("%d\n", ft_isdigit('5'));
 	//printf("%d\n", ft_isalnum('f'));
 	//printf("%d\n", ft_isascii('5'));
 	//printf("%d\n", ft_isprint('\0'));
@@ -36,17 +36,19 @@ int	main(void)
 	//char 	const *str= "saja walid";
 	//char	const*str2= "id";
 	//printf("%s\n", ft_strtrim(str,str2));
-	char *s = " hi there  u";
-	char	**v = ft_split(s, ' ');
-	int	i;
-	 i = 0;
-	while (v[i])
-	{
-		printf("%s\n", v[i]);
-		free(v[i]);
-		i++;
-	}
-	free(v);
+	//char *s = " hi there  u";
+	//char	**v = ft_split(s, ' ');
+	//int	i;
+	 //i = 0;
+	//while (v[i])
+	//{
+	//	printf("%s\n", v[i]);
+	//	free(v[i]);
+	//	i++;
+	//}
+	//free(v);
+	//printf("%s\n", ft_itoa(-300));
 
 	return (0);
+
 }

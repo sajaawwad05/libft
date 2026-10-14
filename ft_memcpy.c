@@ -1,14 +1,13 @@
 #include "libft.h"
+
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (dest == NULL && src == NULL)
-		return NULL;
-	size_t	i;
-	unsigned char *dest_char;
-        dest_char = (unsigned char *)dest;
+	const unsigned char	*src_char;
+	unsigned char		*dest_char;
+	size_t				i;
 
-	const unsigned char *src_char;
-        src_char = (const unsigned char *)src;
+	dest_char = (unsigned char *)dest;
+	src_char = (const unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{
@@ -17,3 +16,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+/*int	main()
+{
+	char	s[10] = "saja112";
+	char	d[10];
+	ft_memcpy(d, s, 6);
+	printf("%s\n", d);
+	printf("%s\n", s);
+}*/

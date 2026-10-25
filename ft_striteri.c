@@ -13,3 +13,15 @@ void	ft_striteri(char *s, void (*f) (unsigned int, char*))
 		i++;
 	}
 }
+/*void	ft_shift(unsigned int i, char *str)
+{
+	(void) i;
+	*str+=1;
+}
+int main()
+{
+
+	char	s[] = "abcd";
+	ft_striteri(s, ft_shift);
+	printf("%s\n", s);
+}*/

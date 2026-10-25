@@ -1,3 +1,5 @@
+#include "libft.h"
+
 int	ft_atoi(const char *str)
 {
 	int	i;
@@ -23,3 +25,10 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
+/*int	main()
+{
+	int	d;
+
+	d = ft_atoi("-55");
+	printf("%d\n",d);
+}*/

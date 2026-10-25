@@ -19,3 +19,10 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	dest[i] = '\0';
 	return (src_len);
 }
+/*int main()
+{
+	char	*s = "hello";
+	char	d[4];
+	ft_strlcpy(d, s, 4);
+	printf("%s\n", d);
+}*/

@@ -6,7 +6,7 @@ void	*ft_memset(void *str, int c, size_t n)
 	unsigned char	*s;
 
 	i = 0;
-	s = str;
+	s = (unsigned char *) str;
 	while (i < n)
 	{
 		s[i] = (unsigned char) c;
@@ -16,7 +16,7 @@ void	*ft_memset(void *str, int c, size_t n)
 }
 /*int	main()
 {
-	char	p[10];
+	char	p[7] = "kkkk";
 	ft_memset(p, 'g', 4);
 	printf("%s\n", p);
 }*/

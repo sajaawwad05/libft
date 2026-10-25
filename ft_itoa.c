@@ -1,34 +1,34 @@
 #include "libft.h"
 
-static int	digit_count(int n)
+static int	digit_count(long n)
 {
 	int	digits;
 
 	digits = 0;
-	if (n < 0)
+	if (n <= 0)
 	{
+		digits++;
+		if (n == 0)
+			return (digits);
 		n = -n;
-		digits++;
 	}
-	while (n > 9)
+	while (n > 0)
 	{
-		n = n / 10;
+		n /= 10;
 		digits++;
 	}
-	if (n > 0 && n < 9)
-		digits++;
 	return (digits);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*result;
-	long	digits;
+	int		digits;
 	long	num;
 
 	num = n;
 	digits = digit_count(num);
-	result = malloc((digits + 1) * sizeof(char));
+	result = malloc(sizeof(char) * (digits + 1));
 	if (!result)
 		return (NULL);
 	result[digits] = '\0';

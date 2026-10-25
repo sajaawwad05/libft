@@ -21,8 +21,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	size_t	i;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
-	while (s1[start] && set && is_set(s1[start], set))
+	while (s1[start] && is_set(s1[start], set))
 		start++;
 	end = ft_strlen(s1);
 	while (end > start && is_set(s1[end - 1], set))
@@ -40,3 +42,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	result[i] = '\0';
 	return (result);
 }
+/*int main()
+{
+	char	*s;
+	s = ft_strtrim("wwhello worlwdw", "w");
+	printf("%s\n", s);
+}*/

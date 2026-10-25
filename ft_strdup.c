@@ -21,3 +21,11 @@ char	*ft_strdup(const char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+/*int main()
+{
+	char *s;
+	s = ft_strdup("ello");
+	printf("%s\n", s);
+	free(s);
+	s = NULL;	
+}*/

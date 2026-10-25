@@ -12,10 +12,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 		dst_len++;
 	while (src[src_len])
 		src_len++;
-	if (dst_len == dstsize)
+	if (dstsize <= dst_len)
 		return (dstsize + src_len);
 	i = 0;
-	while (src[i] && (dst_len + i + 1) < dstsize)
+	while (src[i] && (dst_len + i < dstsize - 1))
 	{
 		dest[dst_len + i] = src[i];
 		i++;
@@ -23,3 +23,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	dest[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
+/*int main()
+{
+	char	s[5]= "here";
+	char	d[10] = "hi";
+	ft_strlcat(d, s, 4);
+	printf("%s\n", d);
+}*/

@@ -16,11 +16,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*int	main()
+/*int main()
 {
-	char	s[10] = "saja112";
-	char	d[10];
-	ft_memcpy(d, s, 6);
-	printf("%s\n", d);
-	printf("%s\n", s);
+	char	s[20] = "hello world";
+	char	d[10] = "ii";
+
+	ft_memcpy(d, s, 4);
+	printf("%s\n",d);
 }*/

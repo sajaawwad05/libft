@@ -15,7 +15,7 @@ void	ft_bzero(void *s, size_t n)
 }
 /*int	main()
 {
-	char	st[30] = "abcdefghikj";
-	ft_bzero(st, 5);
-	printf("%s\n", st + 5);
+	char	s[9] = "hello";
+	ft_bzero(s+3, 2);
+	printf("%s\n", s);	
 }*/

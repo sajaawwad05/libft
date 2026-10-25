@@ -19,3 +19,14 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 	res[i] = '\0';
 	return (res);
 }
+/*char	ft_shift(unsigned int index, char c)
+{
+	(void) index;
+	return (c + 1);
+}
+int main()
+{
+	char	*str;
+	str = ft_strmapi("abcd", ft_shift);
+	printf("%s\n", str);
+}*/

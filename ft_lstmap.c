@@ -22,3 +22,24 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
+/*void	*return_content(void *content)
+{
+	return ((void *) ft_strdup((char *) content));
+}
+void	del(void *content)
+{
+	free(content);
+}
+int main()
+{
+	t_list	*lst1;
+	t_list	*lst2;
+	t_list	*new_list;
+
+	lst1 = ft_lstnew(("k"));
+	lst2 = ft_lstnew(("o"));
+	lst1->next = lst2;
+	new_list = ft_lstmap(lst1, return_content, del);
+	printf("%s\n",(char *)new_list->content);
+}
+*/

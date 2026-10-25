@@ -11,3 +11,11 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = (NULL);
 	return (new_node);
 }
+/*int main()
+{
+	t_list	*node;
+	node = ft_lstnew("hiii");
+	printf("%s\n",(char *) node->content);
+	printf("%p\n",(void *) node->next);
+	free(node);
+}*/

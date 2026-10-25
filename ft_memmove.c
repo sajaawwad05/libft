@@ -5,6 +5,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	const unsigned char	*src_char;
 	unsigned char		*dest_char;
 
+	if (n == 0)
+		return (dest);
+	if(!dest || !src)
+		return (NULL);
 	dest_char = (unsigned char *) dest;
 	src_char = (const unsigned char *) src;
 	if (dest_char > src_char)
@@ -19,9 +23,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		ft_memcpy(dest, src, n);
 	return (dest);
 }
-int	main()
+/*int main ()
 {
-	char	str[10] = "hello";
-	char	*p = ft_memmove(str + 2, str, 5);
-	printf("%s\n", str);
-}
+	int	s = 222;
+	int	d = 0;
+	ft_memmove(&d, &s, 3);
+	printf("%d\n", d);
+}*/

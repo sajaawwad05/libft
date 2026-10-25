@@ -2,9 +2,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	j;
-	char	*str;
+	unsigned int	i;
+	size_t			j;
+	char			*str;
 
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
@@ -23,3 +23,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[j] = '\0';
 	return (str);
 }
+/*int main()
+{
+	char	*r;
+	r = ft_substr("hellokk", 4, 3);
+	printf("%s\n", r);
+	free(r);
+	r = NULL;
+}*/

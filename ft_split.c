@@ -1,90 +1,89 @@
 #include "libft.h"
 
-size_t	words_count(char const *s, char c)
-{
-	size_t	words;
-	bool	inside_word;
-
-	words = 0;
-	while (*s)
-	{
-		inside_word = false;
-		while (*s && *s == c)
-			++s;
-		while (*s && *s != c)
-		{
-			if (!inside_word)
-			{
-				++words;
-				inside_word = true;
-			}
-			++s;
-		}
-	}
-	return (words);
-}
-
-int	safe_malloc(char **words_v, int position, size_t buffer)
+static int	count_words(char const *s, char c)
 {
 	int	i;
-
-	words_v[position] = malloc(buffer);
-	if (words_v[position] == NULL)
-	{
-		i = 0;
-		while (i < position)
-		{
-			free(words_v[i]);
-			i++;
-		}
-		return (1);
-	}
-	return (0);
-}
-
-int	cpy_words(char **words, char const *s, char c)
-{
-	size_t	len;
-	size_t	i;
+	int	count;
 
 	i = 0;
-	while (*s)
+	count = 0;
+	while (s[i])
 	{
-		len = 0;
-		while (*s && *s == c)
-			++s;
-		while (*s && *s != c)
-		{
-			++len;
-			++s;
-		}
-		if (len)
-		{
-			if (safe_malloc(words, i, len + 1))
-				return (1);
-			ft_strlcpy(words[i], s - len, len + 1);
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
+			count++;
+		i++;
+	}
+	return (count);
+}
+static char	*get_word(char const *s, int start, int end)
+{
+	char	*word;
+	int		i;
+
+	word = malloc(end - start + 1);
+	if (!word)
+		return (NULL);
+	i = 0;
+	while (start < end)
+	{
+		word[i] = s[start];
+		i++;
+		start++;
+	}
+	word[i] = '\0';
+	return (word);
+}
+
+static void	free_all(char **arr, int n)
+{
+	while (n > 0)
+	{
+		n--;
+		free(arr[n]);
+	}
+	free(arr);
+}
+
+static char	**fill(char **arr, char const *s, char c)
+{
+	int	i;
+	int	j;
+	int	start;
+
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
 			i++;
+		else
+		{
+			start = i;
+			while (s[i] && s[i] != c)
+				i++;
+			arr[j] = get_word(s, start, i);
+			if (!arr[j])
+			{
+				free_all(arr, j);
+				return (NULL);
+			}
+			j++;
 		}
 	}
-	return (0);
+	return (arr);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	words;
-	char	**words_v;
+	char	**arr;
+	int		words;
 
-	if (s == NULL)
+	if (!s)
 		return (NULL);
-	words = words_count(s, c);
-	words_v = malloc ((words + 1) * sizeof (char *));
-	if (words_v == NULL)
+	words = count_words(s, c);
+	arr = malloc(sizeof(char *) * (words + 1));
+	if (!arr)
 		return (NULL);
-	words_v[words] = NULL;
-	if (cpy_words(words_v, s, c))
-	{
-		free(words_v);
-		return (NULL);
-	}
-	return (words_v);
+	arr[words] = NULL;
+	return (fill(arr, s, c));
 }

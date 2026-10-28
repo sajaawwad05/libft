@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by saawwad*
+*This project has been created as part of the 42 curriculum by saawwad.*
 
 # Libft
 
@@ -23,7 +23,7 @@ The library is split into three parts.
 Re-implementations of standard functions, with the same prototypes and behavior as the originals (prefixed with `ft_`).
 
 | Category | Functions |
-
+|---|---|
 | Character checks | `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint` |
 | Character conversion | `ft_toupper`, `ft_tolower` |
 | String functions | `ft_strlen`, `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_strnstr`, `ft_strlcpy`, `ft_strlcat`, `ft_strdup` |
@@ -35,7 +35,7 @@ Re-implementations of standard functions, with the same prototypes and behavior 
 Functions that are not in libc, or that are part of it in a different form.
 
 | Function | Description |
-
+|---|---|
 | `ft_substr` | Returns a substring of a string, allocated with `malloc`. |
 | `ft_strjoin` | Concatenates two strings into a new allocated string. |
 | `ft_strtrim` | Trims a set of characters from the start and end of a string. |
@@ -61,7 +61,7 @@ typedef struct s_list
 ```
 
 | Function | Description |
-
+|---|---|
 | `ft_lstnew` | Creates a new list node. |
 | `ft_lstadd_front` | Adds a node at the beginning of the list. |
 | `ft_lstsize` | Counts the nodes in the list. |
@@ -142,22 +142,22 @@ hello
 42
 world
 ```
+
 ## Resources
 
 ### References
 
-- [The C Programming Language](https://www.youtube.com/watch?v=gq_ZXCuRhU4&list=PLA1FTfKBAEX4hblYoH6mnq0zsie2w6Wif)
-- [Makefile] (https://www.youtube.com/live/GExnnTaBELk?si=yiixIAYwGOwdIMY-c)
-- [Linux Man Page] (https://linux.die.net/man/)
+- [C Programming Language (Youtube Playlis)](https://www.youtube.com/watch?v=gq_ZXCuRhU4&list=PLA1FTfKBAEX4hblYoH6mnq0zsie2w6Wif)
+- [Makefile](https://www.youtube.com/live/GExnnTaBELk?si=yiixIAYwGOwdIMY-c)
+- [Linux Man Page](https://linux.die.net/man/)
 - [42 Norm](https://github.com/42School/norminette)
 
 ### Use of AI
 
-
 AI was used as a learning and support tool only
 
-- **Understanding concepts:** explanations of how functions such as `memmove` (overlapping memory) and `strlcpy`/`strlcat` behave, and of linked list manipulation.
+- **Understanding concepts:** explanations of how functions such as `memmove` (overlapping memory) and `strlcpy`/`strlcat` behave, understanding the commands that are to be used in the Makefile,`split' function (how to implement the code), and of linked list manipulation.
 - **Testing:** ideas for edge cases to test the functions (empty strings, `NULL` arguments, overflow cases).
 - **Documentation:** help structuring and wording this `README.md`.
 
-All the code of the library was written, understood and tested by the project authors.
+All the code of the library was written, understood and tested by the project author.

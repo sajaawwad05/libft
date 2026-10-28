@@ -12,7 +12,7 @@ The project teaches:
 - Writing clean, norm-compliant C code (the 42 Norm).
 - Dynamic memory allocation and avoiding leaks.
 - Building a static library with a `Makefile`.
-- Implementing and manipulating singly linked lists (bonus part).
+- Implementing and manipulating singly linked lists.
 
 ### Library overview
 

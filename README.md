@@ -147,16 +147,17 @@ world
 
 ### References
 
-- [C Programming Language (Youtube Playlis)](https://www.youtube.com/watch?v=gq_ZXCuRhU4&list=PLA1FTfKBAEX4hblYoH6mnq0zsie2w6Wif)
+- [C Programming Language (Youtube Playlist)](https://www.youtube.com/watch?v=gq_ZXCuRhU4&list=PLA1FTfKBAEX4hblYoH6mnq0zsie2w6Wif)
 - [Makefile](https://www.youtube.com/live/GExnnTaBELk?si=yiixIAYwGOwdIMY-c)
 - [Linux Man Page](https://linux.die.net/man/)
 - [42 Norm](https://github.com/42School/norminette)
 
 ### Use of AI
 
-AI was used as a learning and support tool only
+AI was used as a learning and support tool only.
 
-- **Understanding concepts:** explanations of how functions such as `memmove` (overlapping memory) and `strlcpy`/`strlcat` behave, understanding the commands that are to be used in the Makefile,`split` function (how to implement the code), and of linked list manipulation.
+- **Understanding concepts:** explanations of how functions such as `memmove` (overlapping memory) and `strlcpy`/`strlcat` behave, understanding the commands that are to be used in the Makefile, the logic behind `split` (counting words, allocating each substring, freeing on failure,  undestanding
+linked list manipulation.
 - **Testing:** ideas for edge cases to test the functions (empty strings, `NULL` arguments, overflow cases).
 - **Documentation:** help structuring and wording this `README.md`.
 

@@ -156,7 +156,7 @@ world
 
 AI was used as a learning and support tool only
 
-- **Understanding concepts:** explanations of how functions such as `memmove` (overlapping memory) and `strlcpy`/`strlcat` behave, understanding the commands that are to be used in the Makefile,`split' function (how to implement the code), and of linked list manipulation.
+- **Understanding concepts:** explanations of how functions such as `memmove` (overlapping memory) and `strlcpy`/`strlcat` behave, understanding the commands that are to be used in the Makefile,`split` function (how to implement the code), and of linked list manipulation.
 - **Testing:** ideas for edge cases to test the functions (empty strings, `NULL` arguments, overflow cases).
 - **Documentation:** help structuring and wording this `README.md`.
 

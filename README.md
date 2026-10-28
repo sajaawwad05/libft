@@ -147,8 +147,8 @@ world
 
 ### References
 
-- [C Programming Language (Youtube Playlist)](https://www.youtube.com/watch?v=gq_ZXCuRhU4&list=PLA1FTfKBAEX4hblYoH6mnq0zsie2w6Wif)
-- [Makefile](https://www.youtube.com/live/GExnnTaBELk?si=yiixIAYwGOwdIMY-c)
+- [C Programming Language (YouTube Playlist)](https://www.youtube.com/watch?v=gq_ZXCuRhU4&list=PLA1FTfKBAEX4hblYoH6mnq0zsie2w6Wif)
+- [Makefile tutorial (YouTube)](https://www.youtube.com/live/GExnnTaBELk?si=yiixIAYwGOwdIMY-c)
 - [Linux Man Page](https://linux.die.net/man/)
 - [42 Norm](https://github.com/42School/norminette)
 
